@@ -1,0 +1,28 @@
+1. state :
+- Products // tat ca cac san pham
+- CartItems // tat ca cac san pham trong Cart
+- Total // tong tien trong Cart ( bao gom tax & subtotal )
+- subTotal // tong tien trong Cart ( chi tinh subtotal )
+- tax // tong tien tax trong Cart 
+
+2. 
+- Kiem tra trong CartItems co item nao ko 
+- tempCartItems = [...cartItems] 
+
+3. 
+Event addCartItem(id) // id product
+-  kiem tra Product duoc add co ton tai trong cart hay chua
+- tempItem =  tempCartItems.find(item => {
+    item.id === id
+})
+- 2 truong hop xay ra : 
+- neu chua co : 
+if(!tempItem){
+    tempProducts = [...this.state.Products];
+    tempproduct = tempProducts.find(product => {
+        product.id === id
+    })
+    let cartItem = {...tempproduct,price,count:1}
+    let cartItems = {...}
+
+}
